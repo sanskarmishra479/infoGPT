@@ -1,0 +1,262 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f9f9fc, #f3f3f8);
+  color: #333;
+  text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: black;
+  position: sticky;
+  /* top: 0;
+  z-index: 10; */
+}
+
+.navbar-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.navbar-profile img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 5px;
+}
+
+/* Logo */
+.logo {
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Styling */
+.title {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Pixelify Sans", sans-serif;
+  background: linear-gradient(90deg, #383838 0%, #585858 40%, #8c8c8c 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Footer (Form) */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer .input {
+  padding: 10px;
+  width: 500px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  color: #333;
+}
+
+.footer .input::placeholder {
+  color: #aaa;
+}
+
+.footer .send-btn {
+  font-size: 20px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #000000;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .send-btn:hover {
+  background-color: #3b3b3b;
+}
+
+/* Chat Container */
+.chatContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 80px;
+  position: relative;
+}
+.chatContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Chat Stripe */
+.wrapper {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper.ai {
+  justify-content: flex-start;  /* Align AI's messages to the left */
+}
+
+.wrapper.user {
+  justify-content: flex-end;  /* Align User's messages to the right */
+}
+
+/* Message Styling */
+.chat {
+  background: #000000;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 60%;
+}
+
+.ai .message {
+  background: #ffffff;
+  color: #333;
+}
+
+.user .message {
+  background: #ffffff;
+  color: #333;
+}
+
+.message {
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 10px;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+/* Connect Line */
+.wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  right: 100%;
+  border-left: 2px solid #aaa;
+  height: 1px;
+  z-index: -1;
+  width: 20px; /* length of the line */
+}
+
+.wrapper.user::after {
+  right: auto;
+  left: -20px; /* align the line to the user side */
+}
+
+/* Profile Images */
+.profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+/* Loading Indicator */
+.message.loading {
+  color: transparent;
+  border-left: 3px solid #aaa;
+  padding-left: 10px;
+  animation: typing 1s steps(5) infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 80%; }
+}
+
+/* cards */
+
+.card-container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 130px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  width: 35px;
+  height: 35px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: #666;
+}

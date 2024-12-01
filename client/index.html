@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>infoGPT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="127.0.0.1:5173"><img src="navLogo.png" alt="Website Logo"></a>
+    </div>
+    <div class="navbar-profile">
+      <img src="icons8-user-30 (1).png" alt="Profile Logo">
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="logo">
+      <a href="127.0.0.1:5173"><img src="file1logo.png" alt="Website Logo"></a>
+    </div>
+    <h1 class="title">Empowering Conversations with Intelligence at Your Fingertips</h1>
+    <p class="subtitle">Can I help you with anything?</p>
+    
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"><i class="ri-terminal-box-fill"></i></div>
+        <h3 class="card-title">Print "Hello! World" in javascript</h3>
+        <p class="card-subtitle">Learn javascript</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="ri-search-2-fill"></i></div>
+        <h3 class="card-title">What is machine learning</h3>
+        <p class="card-subtitle">Search anything</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="ri-global-fill"></i></div>
+        <h3 class="card-title">Tell me some current trends in A.I.</h3>
+        <p class="card-subtitle">Trending Now</p>
+      </div>
+    </div>
+    <div class="chatContainer">
+
+    </div>
+    <!-- Footer -->
+    <form class="footer">
+      <textarea name="prompt" id="searchInput" placeholder="Ask anything..." class="input" required></textarea>
+      <button type="submit" class="send-btn">
+        <i class="ri-send-plane-2-fill"></i>
+      </button>
+    </form>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
