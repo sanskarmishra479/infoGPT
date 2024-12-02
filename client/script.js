@@ -90,7 +90,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv);
 
-    const response = await fetch('https://infogpt-3.onrender.com', {
+    const response = await fetch('https://infogpt-1.onrender.com/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
