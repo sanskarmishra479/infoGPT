@@ -52,3 +52,27 @@ Info-GPT is a web application that demonstrates the integration of advanced AI w
    ```bash
    git clone https://github.com/your-repo/info-gpt.git
    cd info-gpt
+
+
+2. Install backend dependencies:
+    ```bash
+    cd server
+    npm install
+
+
+3. Install frontend dependencies:
+    ```bash
+    cd ../client
+    npm install
+
+
+4. Start the backend server:
+    ```bash
+    cd ../server
+    node server.js
+
+
+5. Start the frontend server:
+    ```bash
+    cd ../client
+    npm run dev
