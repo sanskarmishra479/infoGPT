@@ -9,10 +9,6 @@
 2. [Features](#features)  
 3. [Technologies Used](#technologies-used)  
 4. [Installation](#installation)  
-5. [Usage](#usage)  
-6. [Project Structure](#project-structure)  
-7. [Future Scope](#future-scope)  
-8. [Contributors](#contributors)  
 
 ---
 
