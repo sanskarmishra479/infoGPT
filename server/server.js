@@ -5,7 +5,6 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 
 dotenv.config();
 
-// Initialize Gemini API client
 const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({
@@ -24,19 +23,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Default route
 app.get('/', async (req, res) => {
-  res.status(200).send({
-    message: 'Hello from Gemini GPT',
-  });
-});
 
-// Route to handle requests
 app.post('/', async (req, res) => {
   try {
     const prompt = req.body.prompt;
 
-    // Start a new chat session with Gemini
     const chatSession = model.startChat({
       generationConfig,
       history: [],
@@ -44,7 +36,6 @@ app.post('/', async (req, res) => {
 
     const result = await chatSession.sendMessage(prompt);
 
-    // Send back the generated response from Gemini
     res.status(200).send({
       bot: result.response.text(),
     });
@@ -54,6 +45,6 @@ app.post('/', async (req, res) => {
   }
 });
 
-// Start the server
+
 app.listen(5000, () => console.log('AI server started on http://localhost:5000'));
 
